@@ -27,9 +27,11 @@ The IgxGrid's toolbar is shown using the grid's `showToolbar` property - just se
 </igx-grid>
 ```
 
-#### Exporting
+#### Features
 
-The IgxGrid's toolbar can be configured to allow IgxGrid's data exporting in different formats - MS Excel and CSV. You can enable each exporting format independently by setting its dedicated boolean property to true:
+The IgxGrid's toolbar can be configured to allow hiding and pinning columns, and exporting data to MS Excel and CSV. You can enable each feature independently by setting its dedicated boolean property to true:
+- for hiding columns set `columnHiding` to `true`
+- for pinning columns set `columnPinning` to `true`
 - for MS Excel export set the grid's `exportExcel` property to `true`
 - for CSV export set the grid's `exportCsv` property to `true`
 
@@ -49,6 +51,8 @@ The following code snippet demonstrates how to enable the MS Excel export and CS
 <igx-grid [data]="data" [autoGenerate]="true" height="400px" width="600px"
     [showToolbar]="true"
     toolbarTitle="Grid Title"
+    [columnHiding]="true"
+    [columnPinning]="true"
     [exportExcel]="true"
     [exportCsv]="true"
     exportText="Export"
