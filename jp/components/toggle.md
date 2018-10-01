@@ -118,7 +118,7 @@ export class AppModule {}
 </div>
 ```
 
-[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は、[**IgxOverlayService**](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/overlay_main.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
+[`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は、[**IgxOverlayService**]({environment:angularApiUrl}/classes/igxoverlayservice.html) を使用し、コンテンツの表示方法を制御するために [`open`]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [`toggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドが任意のオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 ```typescript
 // template.component.ts
