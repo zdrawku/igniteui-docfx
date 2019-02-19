@@ -123,6 +123,19 @@ export class AppModule {}
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力に値を提供する場合、この値は [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value)入力より大きい値に定義します。それ以外の場合、**進行状況の更新に渡す値を取得する更新は一度のみとなります。
 <div class="divider--half"></div>
 
+#### 不確定の進捗
+
+あらかじめ設定された終了状態を提供しないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) 入力プロパティを `true` に設定します。
+プログレスバーにこのバインドを適用すると以下のような結果になります。
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="indeterminate-progressbar-sample-iframe" frameborder="0" seamless width="100%" height="100%" src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="indeterminate-progressbar-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
+</div>
+<div class="divider--half"></div>
+
 ### API
 <div class="divider--half"></div>
 
