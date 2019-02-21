@@ -281,7 +281,7 @@ export class MyCustomDropDownComponent {
     </igx-drop-down>
 ```
 
-The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under it in a grouped fashion, making it easier for users to differentiate the separate categories of foods in the example. The group also has the additional functionality of disabling `igx-drop-down-item`s inside of its body. For example, lets say we do not the `Meats` food group to be selectable in our drop down. Instead of disabling all of the entries in `Meats` separately, we can do the following:
+The `igx-drop-down-item-group` displays all of the `igx-drop-down-item`s under it in a grouped fashion, making it easier for users to differentiate the separate categories of foods in the example. The group also has the additional functionality of disabling `igx-drop-down-item`s inside of its body. For example, lets say we do not want `Meats` food group to be selectable in our drop down. Instead of disabling all of the entries in `Meats` separately, we can do the following:
 
 ```html
     <igx-drop-down>
