@@ -326,10 +326,19 @@ The result of the configuration can be seem below:
 }
 
 @@if (igxName === 'IgxGrid') {
-### Application Demo
+### Application Demos
+This demo shows how to move a row from one position to another by using the mouse event's coordinates to get the cursor's position. 
+Try dragging a row and placing it onto another row, depending on which direction you drag, the dragged row will either follow or precede the row you drop it on.
+<div class="sample-container loading" style="height:560px">
+    <iframe id="grid-row-reorder-iframe" src='{environment:demosBaseUrl}/grid/grid-row-reorder' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
+</div>
+<br/>
+<div>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-row-reorder-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+</div>
+
 The following demo demonstrates how to use row drag event information to change both states of a custom component, where the row is dropped, and the source grid itself.
 Try to drag moons from the grid and drop them to their corresponding planets. Row drag ghost background is dynamically changed, depending on the hovered planet. If you succeed then the row in the grid will be selected and dragging will be disabled for it. Clicking planets will give you useful information.
-
 <div class="sample-container loading" style="height:560px">
     <iframe id="grid-row-drag-1" src='{environment:demosBaseUrl}/grid/grid-row-drag' width="100%" height="100%" seamless frameBorder="0" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
