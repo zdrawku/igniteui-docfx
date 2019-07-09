@@ -504,7 +504,7 @@
     - name: Displaying Esri Imagery
       href: map_displaying_esri_imagery.md
       new: true
-    - name: Displaying Heat Tiles Imagery
+    - name: Displaying Heat Imagery
       href: map_displaying_heat_imagery.md
       new: true
     - name: Displaying OSM Imagery
