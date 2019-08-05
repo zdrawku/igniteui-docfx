@@ -1,4 +1,4 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid 複数セル選択 | Ignite UI for Angular | infragistics 
 _description: Angular イベント、API、あるいはマウス操作によって、Angular Material の Ignite UI テーブル の行および複数セル データの選択が簡単に実行できます。
@@ -343,31 +343,31 @@ public selection = true;
 
 **注:** セル選択は [`onSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onselection) をトリガーしますが [`onRowSelectionChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowselectionchange) はトリガーしません。
 
-### Styling
+### スタイル設定
 
-The theme engine exposes properties that allows us to style the range of selected cells.
+テーマ エンジンは、選択されたセルの範囲をスタイルすることを可能にするプロパティを公開します。
 
-#### Import theme
+#### テーマのインポート
 
-To get started with styling the selection, we need to import the `index` file, where all the theme functions and component mixins live:
+選択のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // in component.scss
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-#### Define colors
+#### 色の定義
 
-Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 ```scss
     $text-color: igx-contrast-color($default-palette, 'primary', 900);
     $background-color: igx-color($default-palette, "primary", 900);
     $border-yellow: #f2c43c;
 ```
 
-#### Create custom theme
+#### カスタム テーマの作成
  
-Next we create a new theme that extends the [`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`igx-grid-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-theme) を拡張する新しいテーマを作成します。
 
 ```scss
 $custom-grid-theme: igx-grid-theme(
@@ -377,9 +377,9 @@ $custom-grid-theme: igx-grid-theme(
 );
 ```
 
-#### Apply theme
+#### テーマの適用
 
-Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
+次にコンポーネントのスタイルに mixin を含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
     @include igx-grid($custom-grid-theme);
@@ -387,7 +387,7 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
 
  >[!NOTE]
  >If the component is using an [`Emulated ViewEncapsulation`](../themes/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
- > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
+ > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
 
  ```scss
     :host { 
@@ -398,10 +398,10 @@ Afterwards, all we need to do is include the mixin in our component's style (cou
 ```
 
 
-With the custom theme applied, the selected grid cells are highlighted with our selected colors:
+カスタム テーマを適用すると、選択したグリッドセルが選択した色で強調表示されます。
 
 @@if (igxName === 'IgxGrid'){
-#### Demo
+#### デモ
 
 <div class="sample-container loading" style="height:620px">
     <iframe id="grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
@@ -414,28 +414,28 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="hierarchical-grid-multi-cell-style-iframe" data-src='{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-cell-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
 }
 
 
 @@if (igxName === 'IgxTreeGrid'){
-#### Demo
+#### デモ
 <div class="sample-container loading" style="height:620px">
     <iframe id="tree-grid-multi-cell-selection-style-iframe" data-src='{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload no-theming"></iframe>
 </div>
 <br/>  
 <div>
     <button data-localize="stackblitz" class="stackblitz-btn" data-iframe-id="custom-tree-grid-multi-cell-selection-style-iframe" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
+        data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示
     </button>
 </div>
 }
