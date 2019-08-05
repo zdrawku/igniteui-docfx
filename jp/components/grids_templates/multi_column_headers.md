@@ -1,4 +1,4 @@
-@@if (igxName === 'IgxGrid') {
+﻿@@if (igxName === 'IgxGrid') {
 ---
 title: Angular 複数列ヘッダー | Ignite UI for Angular | Infragistics
 _description: Ignite UI Material UI グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
@@ -194,10 +194,10 @@ _language: ja
 ```
 }
 
-### Multi Column Header Template
+### 複数列ヘッダー テンプレート
 
-Each of the column groups of the grid can be templated separately. The column group expects `ng-template` tag decorated with the `igxHeader` directive.
-The `ng-template` is provided with the column group object as a context.
+グリッドの各列グループは個別のテンプレートを持つことができます。列グループは、`igxHeader` ディレクティブで装飾された `ng-template` タグを必要とします。
+`ng-template` は、列グループ オブジェクトと共にコンテキストとして提供されています。
 
 ```html
 ...
@@ -210,7 +210,7 @@ The `ng-template` is provided with the column group object as a context.
 ...
 ```
 
-If you want to re-use a single template for several column groups, you could set the [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) property of the column group like this:
+複数の列グループに対して単一のテンプレートを再利用する場合は、以下のように列グループの [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) プロパティを設定できます。
 
 ```html
 <ng-template #columnGroupHeaderTemplate let-columnGroup>
@@ -228,7 +228,7 @@ If you want to re-use a single template for several column groups, you could set
 ```
 
 > [!NOTE]
-> If a header is retemplated and the corresponding column group is movable, you have to set the **draggable** attribute to **false** on the templated elements, so that you can handle any of the events that are applied!
+> ヘッダーが再テンプレート化され、対応する列グループが移動可能な場合は、テンプレート要素で **draggable** 属性を **false** に設定する必要があり、これにより適用されるイベントをすべて処理できます。
 
 ```html
 <ng-template igxHeader>
@@ -236,7 +236,7 @@ If you want to re-use a single template for several column groups, you could set
 </ng-template>
 ```
 
-The following sample demonstrates how to implement collapsible column groups using header templates.
+次のサンプルは、ヘッダー テンプレートを使用して折りたたみ可能な列グループを実装する方法を示しています。
 
 @@if (igxName === 'IgxGrid') {
 <div class="sample-container loading" style="height:550px">
@@ -244,7 +244,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -253,7 +253,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="treegrid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -262,7 +262,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 </div>
 <br/>
 <div>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz</button>
+<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="hierarchical-grid-multi-column-header-template-iframe" data-demos-base-url="{environment:demosBaseUrl}">stackblitz で表示</button>
 </div>
 }
 
