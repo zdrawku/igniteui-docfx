@@ -4,6 +4,7 @@
   "description": "Static sample site generator for Ignite UI for Angular.",
   "main": "index.js",
   "scripts": {
+    "start:newLobUrl": "gulp changeLobUrl --lobUrl=5000 && gulp serve",
     "start": "gulp serve",
     "build": "gulp build",
     "build-staging": "set NODE_ENV=staging && gulp build",
