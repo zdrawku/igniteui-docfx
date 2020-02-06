@@ -67,6 +67,11 @@ const gridsConfigs = {
     environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
       environmentVariablesConfig.environment
     ];
+
+    if(argv.lobUrl) {
+      const newLobDemosBaseUrl = `http://localhost:${argv.lobUrl}`;
+      environmentVariablesConfig.variables["lobDemosBaseUrl"] = newLobDemosBaseUrl;
+    }
     
     if (!fs.existsSync(`${DOCFX_SITE}`)) {
       fs.mkdirSync(`${DOCFX_SITE}`);
@@ -188,26 +193,6 @@ const init = (done) => {
     done();
 };
 
-const lobDemosBaseurl = (done) => {
-  if(argv.lobUrl) {
-    const newLobDemosBaseUrl = `http://localhost:${argv.lobUrl}`;
-    var environmentVariablesConfig = JSON.parse(JSON.stringify(environmentVariablesPreConfig));
-      
-    if (process.env.NODE_ENV) {
-      environmentVariablesConfig.environment = process.env.NODE_ENV.trim();
-    }
-    
-    environmentVariablesConfig.variables =
-    environmentVariablesConfig.variables[LANG.toLowerCase().trim()][
-      environmentVariablesConfig.environment
-    ];
-    environmentVariablesConfig.variables["lobDemosBaseUrl"] = newLobDemosBaseUrl;
-    done();
-  } else {
-    throw Error("No url provided")
-  }
-}
-
 const  browserSyncReload = (done) => {
     browserSync.reload();
     done();
@@ -222,7 +207,6 @@ const build = series(
 
 const buildTravis = series(styles, postProcessorConfigs, generateGridsTopics);
 
-exports.changeLobUrl = lobDemosBaseurl
 exports.buildTravis = buildTravis;
 exports.build = build;
 exports.serve = series(build, init, watchFiles);
